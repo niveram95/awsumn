@@ -1,0 +1,65 @@
+.half {
+  width: 100%;
+  // margin-left: auto;
+  // margin-right: auto;
+}
+/* Acordeon styles */
+.tab {
+  position: relative;
+  margin-bottom: 1px;
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+}
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+label {
+  position: relative;
+  display: block;
+  background: rgb(0, 120, 73);
+  // font-weight: bold;
+  line-height: 3;
+  cursor: pointer;
+  text-align: center;
+}
+.tab-content {
+  color: black;
+  max-height: 10 em;
+  overflow: hidden;
+  // background: rgb(0, 120, 73);
+}
+.tab-content p {
+  margin: 1em;
+}
+
+
+.mat-card {
+  padding: 0;
+}
+
+.mat-card-title {
+  font-size: 18px;
+  text-align: center;
+  padding: 15px 10px 15px;
+  background: rgb(0, 120, 73);
+  color: white;
+  margin: 0;
+}
+
+.mat-card-content {
+  font-size: 16px;
+  padding: 20px;
+}
+
+.info-card {
+  padding: 0;
+}
+
+/deep/.mat-tab-label, /deep/.mat-tab-label-active{
+  min-width: 33%!important;
+  padding: 3px!important;
+  margin: 0px!important;
+ }

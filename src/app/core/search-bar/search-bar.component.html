@@ -1,0 +1,12 @@
+<mat-input-container>
+    <input matInput placeholder="Search for an item."
+           [matAutocomplete]="itemsAutocomplete" [formControl]="itemFormControl">
+</mat-input-container>
+
+<mat-autocomplete #itemsAutocomplete="matAutocomplete">
+    <mat-option *ngFor="let item of filteredItems"
+                (onSelectionChange)="searchItem(item)"
+                [value]="item.description">
+        {{item.description}}
+    </mat-option>
+</mat-autocomplete>

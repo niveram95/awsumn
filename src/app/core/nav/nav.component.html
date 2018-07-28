@@ -1,0 +1,25 @@
+<header>
+    <nav style="background-color: #007849; height: 5em; padding-top: 0;">
+        <div fxFlex fxLayout="row" fxLayoutAlign="center center">
+            <!-- <div fxFlex="50"> -->
+            <!-- <a mat-raised-button *ngFor="let item of menuItems" routerLink="{{item.link}}">
+                    {{item.name | uppercase}}
+                </a> -->
+            <!-- </div> -->
+            <div fxFlex class="text-left">
+                <a class="image-icon" (click)="goHome()" target="_blank">
+                    <img style="margin-right: 10px; height: 30px" src="assets/images/home.png">
+                </a>
+            </div>
+            <div  fxFlex class="text-center">
+                <app-search-bar ></app-search-bar>
+            </div>
+            <div fxFlex class="text-right">
+                <a class="image-icon" target="_blank">
+                    <button (click)="openAddressDialog()" style="margin-left: 10px;" mat-button class="mat-raised-button">Change Address</button>    
+                    <!-- <img (click)="openAddressDialog()" style="margin-left: 10px; height: 30px" src="assets/images/settings.png"> -->
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>

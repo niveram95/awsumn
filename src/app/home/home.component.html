@@ -1,0 +1,28 @@
+<html>
+<div class="agm-map-container">
+	<div class="form-group">
+		<input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control"
+		 #search [formControl]="searchControl">
+	</div>
+	<mat-card>
+		<mat-card-title>
+			Nearby Recycling
+		</mat-card-title>
+		<agm-map style="height: 300px;" [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
+			<agm-marker [label]="'Current Location'" [latitude]="latitude" [longitude]="longitude"></agm-marker> -->				
+			<agm-marker (markerClick)="markerClick(location.place_lat, location.place_long)" *ngFor="let location of locations" [label]="location.place" [latitude]="location.place_lat" [longitude]="location.place_long"></agm-marker>
+		</agm-map>
+	</mat-card>
+</div>
+<mat-card>
+	<div class="tab">
+		<input id="tab-one" type="checkbox" name="tabs">
+		<label for="tab-one">Daily Sustainability Fact</label>
+		<div class="tab-content">
+			<p>The average college student produces 640 pounds of solid waste each year, including 500 disposable cups and 320 pounds
+				of paper.
+				<br>(src: Boston College)</p>
+		</div>
+	</div>
+</mat-card>
+</html>

@@ -1,0 +1,27 @@
+.mat-card {
+  padding: 0;
+}
+
+.mat-card-title {
+  font-size: 18px;
+  text-align: center;
+  padding: 15px 10px 15px;
+  background: rgb(0, 120, 73);
+  color: white;
+  margin: 0;
+}
+
+.mat-card-content {
+  font-size: 16px;
+  padding: 20px;
+}
+
+.info-card {
+  padding: 0;
+}
+
+/deep/.mat-tab-label, /deep/.mat-tab-label-active{
+  min-width: 33%!important;
+  padding: 3px!important;
+  margin: 0px!important;
+ }

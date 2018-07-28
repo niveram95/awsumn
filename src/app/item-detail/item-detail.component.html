@@ -1,0 +1,100 @@
+<!-- BELOW ARE EXAMPLES OF USING THE ITEM NAME, ID, AND DESCRIPTION.
+     These come from the JSON file.  If you would like an attribute added to
+     each attribute, you'll need to add it to the file named item.model.ts too.
+     Please message me if you are having trouble making it work! - Lani -->
+<!-- <mat-progress-spinner *ngIf="!item" class="progress-spinner" [color]="'primary'" [mode]="'indeterminate'">
+</mat-progress-spinner> -->
+<div *ngIf="item">
+    <mat-tab-group class="demo-tab-group">
+        <mat-tab label="How To Dispose">
+            <mat-card class="info-card">
+                <mat-card-title>
+                    How to Dispose of {{ item.description }}
+                </mat-card-title>
+                <mat-card-content>
+                    <!-- {{ item.image}}<br /> -->
+                    {{ item.long_description }}
+                    <!-- <br /><br />Where to sustainably dispose : {{ item.location }} -->
+                </mat-card-content>
+            </mat-card>
+        </mat-tab>
+        <mat-tab lstyle="width: 33%" label="Benefits">
+            <mat-card class="info-card">
+                <mat-card-title>
+                    Benefits of {{ item.description }} Recycling
+                </mat-card-title>
+                <mat-card-content>
+                    {{ item.pros }}
+                    <!-- {{ item.location }} -->
+                </mat-card-content>
+            </mat-card>
+        </mat-tab>
+        <mat-tab label="Consequences">
+            <mat-card class="info-card">
+                <mat-card-title>
+                    Consequences of Improper Disposal
+                </mat-card-title>
+                <mat-card-content>
+                    {{ item.cons }}
+                    <!-- {{ item.location }} -->
+                </mat-card-content>
+            </mat-card>
+        </mat-tab>
+    </mat-tab-group>
+    <mat-card style="padding: 0;">
+        <div class="agm-map-container">
+            <mat-card-title>
+                Nearby {{ item.description }} Recycling
+            </mat-card-title>
+            <!-- <mat-card-content> -->
+                <!-- <div fxFlex class="text-left"> -->
+                <!-- <img style="margin-right: 10px; height: 30px" src="assets/images/route.jpg"> -->
+                <!-- </div>
+              <div fxFlex class="text-left"> -->
+                <!-- </div> -->
+            <!-- </mat-card-content> -->
+            <agm-map style="height: 300px;" [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
+<<<<<<< HEAD
+                <agm-marker [label]="'Current Location'" [latitude]="latitude" [longitude]="longitude"></agm-marker> -->
+                <agm-marker (markerClick)="markerClick(item.place_one_lat, item.place_one_long)" [label]="item.place_one" [latitude]="item.place_one_lat" [longitude]="item.place_one_long"></agm-marker>
+                <agm-marker (markerClick)="markerClick(item.place_two_lat, item.place_two_long)" [label]="item.place_two" [latitude]="item.place_two_lat" [longitude]="item.place_two_long"></agm-marker>            
+                <agm-marker (markerClick)="markerClick(item.place_three_lat, item.place_three_long)" [label]="item.place_three" [latitude]="item.place_three_lat" [longitude]="item.place_three_long"></agm-marker>                            
+=======
+                <agm-marker (markerClick)="markerClick(latitude, longitude)"  [label]="Location" [latitude]="latitude" [longitude]="longitude"></agm-marker>
+                <agm-marker (markerClick)="markerClick(item.place_one_lat, item.place_one_long)" [label]="item.place_one" [latitude]="item.place_one_lat" [longitude]="item.place_one_long"></agm-marker>
+                <agm-marker (markerClick)="markerClick(item.place_two_lat, item.place_two_long)" [label]="item.place_two" [latitude]="item.place_two_lat" [longitude]="item.place_two_long"></agm-marker>
+                <agm-marker (markerClick)="markerClick(item.place_three_lat, item.place_three_long)" [label]="item.place_three" [latitude]="item.place_three_lat" [longitude]="item.place_three_long"></agm-marker>
+>>>>>>> a41909bf167b6981428e0398802286e5c856398d
+            </agm-map>
+        </div>
+    </mat-card>
+</div>
+
+<!-- CODE FROM OLD APP.  Save bc we might use it later. -->
+<!-- <mat-progress-spinner *ngIf="!hero"
+                      class="progress-spinner"
+                      [color]="'primary'"
+                      [mode]="'indeterminate'">
+</mat-progress-spinner>
+<div id="heroe-detail" *ngIf="hero">
+    <ng-container>
+        item info
+        <mat-card class="hero-card">
+            <mat-card-header>
+                <div mat-card-avatar class="hero-header-image"
+                     [ngStyle]="{'background-image': 'url(assets/images/heroes/' + hero.id + '-thumbnail.jpg)'}"></div>
+                <mat-card-title>{{hero.name}}</mat-card-title>
+                <mat-card-subtitle>{{hero.alterEgo}}</mat-card-subtitle>
+                <div class="flex-spacer"></div>
+                <div class="hero-actions">
+                    {{hero.likes}}
+                    <mat-icon matTooltip="{{(canVote ? 'canVote' : 'cannotVote') | translate}}"
+                              [matTooltipPosition]="'above'"
+                              class="like-icon" (click)="like(hero)">favorite
+                    </mat-icon>
+                </div>
+            </mat-card-header>
+            <img mat-card-image src="assets/images/heroes/{{hero.id}}.jpg">
+        </mat-card>
+    </ng-container>
+</div> -->
